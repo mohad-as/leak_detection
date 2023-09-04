@@ -1,0 +1,23 @@
+Here you will find all the data acquisition code you need.Ê
+
+While most files have the same structure, we listed all of them here in case you need to know the slight differences between them. However, generally, the best one is named with Data acquisition 3.ipynb since it has the latest improvements. This file should be accompanied by daqai.py and daqao.py, which have functions implemented using the PyDAQmx module for reading and writing data to National Instruments tools.
+
+In this file, there is a main function where you can adjust different parameters based on your experiment as follows: 
+
+1- path: Determine the place to store the record. 
+
+2 - relative_path: part of the path you need to save in a data frame. 
+
+3- Count: determines the number of samples to record. 
+
+4- initial_value: controls the flow rate. 
+
+5-fs: sampling frequency of the recorded signal determined by the microphone.
+
+6- duration: determines the length of each record in seconds. 
+
+Label: for each record, you need to assign a label. 
+
+Flow_rate: calculated by taking the average of an acquired value before recording and one after recording. It is then assigned to this record. 
+
+In the end, you will get a Dara frame that contains three columns: relative path, flow rate, and label. 
